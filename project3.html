@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="project.css">
+    <title>Document</title>
+    <style>
+        @keyframes new {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes rotates1 {
+            0% {
+                transform: rotate(0deg);
+                
+            }
+            50% {
+                transform: rotate(20deg);
+            }
+            100% {
+                opacity: 1;
+                transform: rotate(-20deg);
+            }
+        
+        }
+        @keyframes move1 {
+            0% {
+                
+            }
+            100% {
+                transform: translate(-200px,0px);
+            }
+        }
+        @keyframes sweep-left {
+  0% {
+    transform: rotate(0deg) translateX(0);
+  }
+  16.66% {
+    transform: rotate(-10deg) translateX(-133.32px);
+  }
+  33.33% {
+    transform: rotate(10deg) translateX(-266.6px);
+  }
+  50% {
+    transform: rotate(-10deg) translateX(-200px);
+  }
+  66.66% {
+    transform: rotate(10deg) translateX(-533.32px);
+  }
+  83.33% {
+    transform: rotate(-10deg) translateX(-666.66px);
+  }
+  100% {
+    transform: rotate(10deg) translateX(-800px);
+  }
+}
+@keyframes sweep {
+  0% {
+    transform: rotate(-20deg) translateX(0);
+  }
+  25% {
+    transform: rotate(20deg) translateX(200px);
+  }
+  50% {
+    transform: rotate(-20deg) translateX(0);
+  }
+  75% {
+    transform: rotate(20deg) translateX(200px);
+  }
+  100% {
+    transform: rotate(-20deg) translateX(0);
+  }
+}
+    
+
+@keyframes clean {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+
+}
+@keyframes sparkle {
+    0% {
+        opacity: 0;
+    }
+    16% {
+      opacity: 1;
+
+    }
+    33% {
+      opacity: 0;
+
+    }
+    50% {
+      opacity: 1;
+    }
+    66% {
+      opacity: 0;
+
+    }
+    83% {
+      opacity: 1;
+
+    }
+    100% {
+        opacity: 1;
+    }
+}
+        #house {
+            position: absolute;
+            min-width: 100vw;
+            min-height: 100vh;
+            width: 100vw;
+            height: 100vh;
+            background-image: url("images/2107.w015.n001.504B.p15.504.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: 2;
+            margin: 0;
+            padding: 0;
+        }
+        #boy {
+          background-image: url("images/Screenshot_2025-10-15_152737-removebg-preview.png");
+          width: 300px;
+          height: 300px;
+          background-size: contain;
+          background-repeat: no-repeat;
+          z-index: 6;
+          position: absolute;
+          top: 320px;
+          left: 300px;
+
+        }
+        #hair {
+            background-image: url("images/istockphoto-1369296148-612x612-removebg-preview.png");
+            width: 100px;
+            height: 100px;
+            z-index: 2000;
+            position: absolute;
+            top: 530px;
+            left: 900px;
+            background-size: cover;
+            animation-name: clean;
+            animation-delay: 3s;
+            animation-iteration-count: 1;
+            animation: clean 2s ease-out 3s forwards;
+        }
+        #star {
+            background-image: url("images/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTExL3Jhd3BpeGVsb2ZmaWNlNl9hX3ZlY3Rvcl9nbG93aW5nX2xpZ2h0X2VmZmVjdF9mZWVsX21hZ2ljX29uX2FfYl9hZDJmOTM1Yi1mMjFmLTQ5YTktYTExNy1hZGE5NWNkOGQyZGVfMS5wbmc-removebg-pre.png");
+            background-size: cover;
+            width: 100px;
+            height: 100px;
+            z-index: 2000;
+            position: absolute;
+            opacity: 0;
+            top: 530px;
+            left: 900px;
+            animation-delay: 4s;
+            animation-iteration-count: 1;
+            animation-name: sparkle;
+            animation-duration: 4s;
+        }
+        #textbox {
+            position: absolute;
+            width: 500px;
+            height: 100px;
+            top: 10px;
+            left: 50px;
+            color: black;
+            font-size: 24px;
+            font-weight:bold;
+            z-index: 1001; /* Make sure it's above the background */
+            border-color: white;
+            border-width: 5px;
+            border-style: solid;
+        }
+        #broom {
+            background-image: url("images/FA70A9CE-A1A5-4D39-B3BC-54CC2378CF30-removebg-preview.png");
+            width: 300px;
+            height: 300px;
+            z-index: 2003;
+            position: absolute;
+            background-size: contain;
+            background-repeat: no-repeat;
+            top: 350px;
+            left: 850px;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+            animation-direction: normal;
+            animation: rotates1 2s ease-in-out forwards,
+            move1 1s ease-in-out forwards;
+            animation-delay: 0s, 2s;
+        }
+    </style>
+    <button onclick="window.location.href='project4.html'">Click here for the next page</button>
+</head>
+<body>
+    <div id="mirror"></div>
+    <div id="hair"></div>
+    <div id="broom"></div>
+    <div id="star"></div>
+    <div id="house"></div>
+    <div id="textbox">If the mouse finishes the trim, it will clean up its mess and will want to clean up the whole house</div>
+    <div id="boy"></div>
+</body>
+</html>

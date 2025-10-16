@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="project.css">
+    <title>Document</title>
+    <style>
+        @keyframes swap {
+        0% {
+            visibility: visible;
+        }
+        100% {
+            visibility: hidden;
+        }
+        }
+        @keyframes showImage {
+        0% { visibility: hidden; }
+        100% { visibility: visible; }
+}
+        @keyframes sleep {
+            0% {
+
+            }
+            100% {
+                transform: rotate(180deg);
+            }
+        }
+        @keyframes new {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 0.5;
+            }
+            100% {
+                opacity: 1;
+            }
+        
+        }
+        @keyframes moveright {
+            0% {
+                
+            }
+            100% {
+                transform: translate(50px,20px);
+            }
+        }
+        #boy {
+            background-image: url("images/30b2ed85-dbd0-4034-8d0c-39f7e22e56eb-removebg-preview.png");
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            background-size: contain;
+            background-repeat: no-repeat;
+            z-index: 4;
+            animation-duration: 2s;
+            animation-iteration-count: 1;
+            animation: swap 4s steps(1, end) forwards;
+            left: 500px;
+            top: 250px;
+            min-width: 200px;
+            min-height: 200px;
+
+        }
+        #boy2 {
+            animation: showImage 4s steps(1, end) forwards;
+            background-image: url("images/IMG_2847-removebg-preview.png");
+            visibility: hidden;
+            width: 260px;
+            height: 260px;
+            left: 440px;
+            top: 265px;
+            animation-delay: 2.1s;
+            position: absolute;
+            background-size: contain;
+            background-repeat: no-repeat;
+            z-index: 4;
+            animation-duration: 2s;
+            animation-iteration-count: 1;
+             
+        }
+        #mouse {
+            background-image: url("images/cartoon-mouse-vector_1020x-1886-removebg-preview.png");
+            width: 100px;
+            height: 100px;
+            left: 680px;
+            top: 360px;
+            position: absolute;
+            background-size: contain;
+            background-repeat: no-repeat;
+            z-index: 7;
+            animation-name: sleep;
+            animation-duration: 2s;
+            animation-iteration-count: 1;
+            animation: sleep 1.5s ease-in-out forwards;
+        }
+        #bedroom {
+            background-image: url("images/172.jpg");
+            position: absolute;
+            min-width: 100vw;
+            min-height: 100vh;
+            width: 100vw;
+            height: 100vh;
+            z-index: 2;
+            margin: 0;
+            padding: 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        #zzz {
+            background-image: url("images/sleep-zzz-icon-illustration-vector-removebg-preview.png");
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            z-index: 10;
+            background-size: contain;
+            background-repeat: no-repeat;
+            top: 300px;
+            left: 750px;
+            animation-iteration-count: 1;
+            animation-name: new;
+            opacity: 0;
+            animation-duration: 3s;
+            animation-delay: 2s;
+            animation: new 1.5s ease-in-out forwards 2s;
+        }
+        #speak {
+            background-image: url("images/Screenshot_2025-10-15_181941-removebg-preview.png");
+            width: 80px;
+            height: 80px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            z-index: 10;
+            top: 300px;
+            left: 570px;
+            position: absolute;
+            animation-iteration-count: infinite;
+            animation-name: moveright;
+            animation-duration: 2s;
+        }
+        #textbox {
+            position: absolute;
+            width: 500px;
+            height: 100px;
+            top: 10px;
+            left: 50px;
+            color: black;
+            font-size: 24px;
+            font-weight:bold;
+            z-index: 1001; /* Make sure it's above the background */
+            border-color: white;
+            border-width: 5px;
+            border-style: solid;
+        }
+    </style>
+    <button onclick="window.location.href='project6.html'">Click here for the next page</button>
+</head>
+<body>
+    <div id="bedroom"></div>
+    <div id="boy"></div>
+    <div id="boy2"></div>
+    <div id="mouse"></div>
+    <div id="zzz"></div>
+    <div id="speak"></div>
+    <div id="textbox">If the mouse is tired, it will fall asleep</div>
+</body>
+</html>

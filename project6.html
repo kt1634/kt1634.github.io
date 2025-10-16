@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="project.css">
+    <title>Document</title>
+    <style>
+        @keyframes left {
+            0% {
+                
+            }
+            100% {
+                transform: translate(-450px,0px);
+            }
+        }
+        @keyframes swap {
+        0% {
+            visibility: visible;
+        }
+        100% {
+            visibility: hidden;
+        }
+        }
+
+        @keyframes show {
+        0% { visibility: hidden; }
+        100% { visibility: visible; }
+}
+        @keyframes rotates {
+            0% {
+                transform: rotate(0deg);
+                opacity: 0;
+            }
+            50% {
+                transform: rotate(20deg);
+            }
+            100% {
+                opacity: 1;
+                transform: rotate(-20deg);
+            }
+        
+        }
+        @keyframes fadein {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        #kitchen {
+            background-image: url("images/1591.jpg");
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            z-index: 2;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        #cfridge {
+            animation: swap 3s steps(1, end) forwards;
+            background-image: url("images/941ec787-bd77-440c-8643-3673460ccf17-removebg-preview.png");
+            width: 500px;
+            height: 500px;
+            z-index: 57;
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 210px;
+            left: -50px;
+            animation-duration: 2s;
+            animation-iteration-count: 1;
+
+        }
+        #mouse {
+            background-image: url("images/cartoon-mouse-vector_1020x-1886-removebg-preview.png");
+            width: 100px;
+            height: 100px;
+            left: 680px;
+            top: 600px;
+            position: absolute;
+            background-size: contain;
+            background-repeat: no-repeat;
+            z-index: 177;
+            animation-duration: 2.5s;
+            animation-name: left;
+            animation-iteration-count: 1;
+            animation: left 1.5s ease-in-out forwards;
+        }
+        #ofridge {
+            background-image: url("images/941ec787-bd77-440c-8643-3673460ccf17-removebg-preview (2).png");
+            width: 500px;
+            height: 500px;
+            z-index: 57;
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 210px;
+            left: -50px;
+            animation-delay: 1s;
+            animation: show 2s steps(1, end) forwards;
+            animation-iteration-count: 1;
+            visibility: hidden;
+        }
+        #boy {
+          background-image: url("images/Screenshot_2025-10-15_152737-removebg-preview.png");
+          width: 300px;
+          height: 300px;
+          background-size: contain;
+          background-repeat: no-repeat;
+          z-index: 6;
+          position: absolute;
+          top: 430px;
+          left: 500px;
+          transform: rotateY(180deg);
+        }
+        #bubble {
+            background-image: url("images/images-removebg-preview (2).png");
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            background-size: contain;
+            background-repeat: no-repeat;
+            animation-name: fadein;
+            top: 520px;
+            left: 250px;
+            z-index: 3000;
+            animation-duration: 3s;
+            animation-delay: 3s;
+            opacity: 0;
+            transform: rotateY(180deg);
+        }
+        #milk {
+            background-image: url("images/transparent-icon-cartoon-cow-tongue-milk-cardboard-milk-carton-cartoon-cow-drinks-milk-from-blue-1710961626431-removebg-preview.png");
+            width: 50px;
+            height: 50px;
+            opacity: 0;
+            position: absolute;
+            background-size: contain;
+            background-repeat: no-repeat;
+            animation-delay: 3s;
+            animation-name: rotates;
+            animation-duration: 3s;
+            z-index: 3001;
+            top: 530px;
+            left: 280px
+        }
+        #textbox {
+            position: absolute;
+            width: 500px;
+            height: 100px;
+            top: 10px;
+            left: 50px;
+            color: black;
+            font-size: 24px;
+            font-weight:bold;
+            z-index: 1001; /* Make sure it's above the background */
+            border-color: white;
+            border-width: 5px;
+            border-style: solid;
+        }
+    </style>
+    <button onclick="window.location.href='project7.html'">Click here for the next page</button>
+</head>
+<body>
+    <div id="kitchen"></div>
+    <div id="cfridge"></div>
+    <div id="ofridge"></div>
+    <div id="mouse"></div>
+    <div id="bubble"></div>
+    <div id="milk"></div>
+    <div id="boy"></div>
+    <div id="textbox">When the mouse wakes up, it will be thirsty and look in the fridge for milk</div>
+</body>
+</html>
