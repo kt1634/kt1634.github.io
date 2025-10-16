@@ -1,9 +1,187 @@
-<html>
-  <head>
-    <title>First page</title>
-  </head>
-  <body>
-    <h1>This is my public repository.</h1>
-    <p>This is a paragraph</p>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="project.css">
+    <style>
+        @keyframes moveright {
+            0% {
+                
+            }
+            100% {
+                 transform: translate(50vh,-20vw);
+            }
+        }
+        @keyframes rotates {
+            0% {
+                transform: rotate(0deg);
+                
+            }
+            50% {
+                
+                transform: rotate(30deg);
+            }
+            100% {
+                transform: rotate(-30deg);
+            }
+        }
+        @keyframes crumbone {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+                transform: translate(-30px, 30px);
+            }
+        
+        
+        }
+        @keyframes crumbtwo {
+            50% {
+                animation-timing-function: ease-in;
+                transform: translateX(100px);
+
+            }
+            50% {
+                animation-timing-function: ease-out;
+                transform: translateY(-100px);
+
+            }
+        }
+        
+        
+        #background {
+            position: relative;
+            background-color: white;
+            z-index: 2;
+        }
+        
+        #crumbs1 {
+            animation-name: crumbone;
+            position: absolute;
+            background-image: url("images/image-removebg-preview.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: 4002;
+            width: 40px;
+            height: 40px;
+            left: 825px;
+            top: 510px;
+            animation-iteration-count: infinite;
+            animation-duration: 800ms;
+            animation-fill-mode: forwards;
+        }
+        .crumbs2 {
+            position: absolute;
+            background-image: url("images/image-removebg-preview.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: 4001;
+            width: 40px;
+            height: 40px;
+            left: 820px;
+            top: 500px;
+            animation-name: crumbtwo;
+            animation-iteration-count: infinite;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+            animation: xAxis 2.5s infinite ease-in;
+            
+            
+        }
+        .crumbs2::after {
+         /* Render dot */
+            animation: yAxis 2.5s infinite ease-out;
+        }
+
+        #mouse {
+            position: absolute;
+            background-image: url("images/588961a26f92f8de713109be5d19690d_t-removebg-preview.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: 4000;
+            width: 300px;
+            height: 300px;
+            left: 700px;
+            top: 400px;
+            animation-iteration-count: infinite;
+            animation-duration: 5s;
+            animation-fill-mode: forwards;
+            animation-direction: alternate;
+
+        }
+        #title1 {
+            position: absolute;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: rgb(227, 107, 107);
+            top: 200px;
+            padding: 10px;
+            font-size: 3em; /* Large font size */
+            overflow-wrap: break-word;
+            transform: rotate(-20deg);
+            left: 200px;
+            z-index: 3001; /* Make sure it's above the background */
+            
+}
+         #title2 {
+            position: absolute;
+            font-family: 'Courier New', Courier, monospace;
+            color: rgb(227, 107, 107);
+            top: 300px;
+            padding: 10px;
+            font-size: 3em; /* Large font size */
+            overflow-wrap: break-word;
+            transform: rotate(-20deg);
+            left: 200px;
+            z-index: 3001;
+         }
+         #title3 {
+            position: absolute;
+            font-family: 'Courier New', Courier, monospace;
+            color: rgb(227, 107, 107);
+            top: 400px;
+            padding: 10px;
+            font-size: 3em; /* Large font size */
+            overflow-wrap: break-word;
+            transform: rotate(-20deg);
+            left: 200px;
+            z-index: 3001;
+         }
+        #notebook {
+            width: 800px;
+            height: 800px;
+            position: absolute;
+            background-size: contain;
+            background-repeat: no-repeat;
+            transform: rotate(-20deg);
+            background-image: url("https://png.pngtree.com/png-clipart/20240506/original/pngtree-open-notebook-semi-flat-color-object-png-image_15020878.png");
+            top: -50px;
+            left: -200px;
+            z-index: 2000;
+        }
+    
+
+        
+
+
+    </style>
+    <button onclick="window.location.href='project1.html'">Click here for the next page</button>
+</head>
+<body>
+    <ahref="project1.html"/a>
+     <div>
+        <div id="house">
+    </div>
+    <div id="mouse"></div>
+    <div id="crumbs1"></div>
+    <div id="crumbs2"></div>
+    <div id="notebook"></div>
+    <div id="title1"> If you give </div>
+    <div id="title2"> A mouse </div>
+    <div id="title3"> A cookie </div>
+
+    </div>
+</body>
 </html>
